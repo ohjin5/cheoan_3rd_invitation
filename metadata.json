@@ -1,0 +1,6 @@
+{
+  "name": "제3회 천안청소년국악관현악단 정기연주회 모바일 초대장",
+  "description": "천안청소년국악관현악단 제3회 정기연주회 ‘우리의 소리, 오늘을 울리다’ 공식 모바일 웹 초대장입니다. 2026년 12월 12일(토) 오후 5시 천안시청소년복합커뮤니티센터 대공연장에서 개최됩니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
