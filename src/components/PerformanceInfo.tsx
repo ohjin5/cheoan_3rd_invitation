@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
-import { MapPin, Share2, Check } from 'lucide-react';
-import { EVENT_DATA } from '../data/event.ts';
+import {
+  MapPin,
+  Share2,
+  Check,
+  ExternalLink,
+} from 'lucide-react';
+
+import {
+  EVENT_DATA,
+  REGISTRATION_URL,
+} from '../data/event.ts';
 
 export const PerformanceInfo: React.FC = () => {
   const [copiedAddress, setCopiedAddress] = useState(false);
@@ -138,8 +147,29 @@ export const PerformanceInfo: React.FC = () => {
         </div>
       </div>
 
-      {/* 캘린더 삭제 → 주소 복사 / 공유하기만 표시 */}
-      <div className="mt-8 pt-4">
+      {/* 사전 관람 신청 */}
+      <div className="mt-7">
+        <a
+          href={REGISTRATION_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex w-full items-center justify-center gap-2.5 bg-[#1D294B] hover:bg-[#263458] border border-[#C59A38] px-5 py-4 text-[#F5E5B7] transition-colors duration-300"
+          aria-label="네이버폼에서 사전 관람 신청하기"
+        >
+          <span className="font-korean-serif text-[15px] sm:text-base font-bold tracking-wide">
+            사전 관람 신청하기
+          </span>
+
+          <ExternalLink className="w-4 h-4 text-[#C59A38] transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        </a>
+
+        <p className="mt-2.5 text-center font-korean-batang text-[11px] sm:text-xs text-[#6E6250]">
+          버튼을 누르면 네이버 사전신청 페이지로 이동합니다.
+        </p>
+      </div>
+
+      {/* 주소 복사 / 공유하기 */}
+      <div className="mt-7 pt-4">
         <div className="grid grid-cols-2 gap-2">
           <button
             type="button"

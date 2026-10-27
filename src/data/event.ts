@@ -1,5 +1,11 @@
 import { EventData, SponsorLogo } from '../types/index.ts';
 
+/**
+ * 네이버폼 사전 관람 신청
+ */
+export const REGISTRATION_URL =
+  'https://form.naver.com/response/HFd3UdVgKqv';
+
 export const EVENT_DATA: EventData = {
   title: '제3회 천안청소년국악관현악단 정기연주회',
   subtitle: '천안청소년국악관현악단 제3회 정기연주회',
@@ -16,7 +22,6 @@ export const EVENT_DATA: EventData = {
   venueName: '천안시청소년복합커뮤니티센터',
   venueHall: '대공연장',
 
-  // 실제 공연장 주소
   venueAddress: '충청남도 천안시 서북구 불당19로 82',
 
   venueDetail: '천안시청소년복합커뮤니티센터 대공연장',
@@ -35,12 +40,13 @@ export const EVENT_DATA: EventData = {
     lng: 127.1135,
   },
 
-  // 주소 기준으로 길찾기
   navigationLinks: {
     naverMap:
       'https://map.naver.com/p/search/충청남도%20천안시%20서북구%20불당19로%2082',
+
     kakaoMap:
       'https://map.kakao.com/?q=충청남도%20천안시%20서북구%20불당19로%2082',
+
     tmap:
       'https://surl.tmap.co.kr/search?q=충청남도%20천안시%20서북구%20불당19로%2082',
   },
