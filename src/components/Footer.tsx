@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { EVENT_DATA } from '../data/event.ts';
 import { InkMountain } from './InkMountain.tsx';
@@ -20,6 +21,18 @@ const footerLogos = [
     alt: '협력 기관 로고 4',
   },
 ];
+
+// BGM 저작권 정보
+// 실제 공유마당 음원 상세페이지의 저작자,
+// 라이선스 버전 및 원본 링크를 확인하여 수정하세요.
+const bgmCredit = {
+  title: '국악 배경음악 #101',
+  author: '공유마당 (저작물 1000 건)',
+  source: '한국저작권위원회',
+  license: 'CC BY 4.0',
+  licenseUrl: 'https://creativecommons.org/licenses/by/4.0/deed.ko',
+  modified: false,
+};
 
 export const Footer: React.FC = () => {
   return (
@@ -137,9 +150,49 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* BGM 저작권 출처 */}
+        <div className="mx-6 sm:mx-9 mt-5 pt-4 border-t border-[#E2D7BE]/70 text-center">
+          <p className="font-korean-serif text-[11px] font-bold text-[#6F4A0C] mb-2">
+            배경음악 출처
+          </p>
+
+          <div className="font-korean-sans text-[10px] sm:text-[11px] text-[#6E6250] leading-[1.9] space-y-0.5">
+            <p>
+              음원명 : {bgmCredit.title}
+            </p>
+
+            <p>
+              저작자 : {bgmCredit.author}
+            </p>
+
+            <p>
+              출처 : {bgmCredit.source}
+            </p>
+
+            <p>
+              라이선스 :{' '}
+              <a
+                href={bgmCredit.licenseUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#1D294B] underline underline-offset-2 hover:text-[#A87A18]"
+              >
+                {bgmCredit.license}
+              </a>
+            </p>
+
+            <p>
+              {bgmCredit.modified
+                ? '음원 편집·변경하여 사용'
+                : '원본 음원 그대로 사용'}
+            </p>
+          </div>
+        </div>
+
         {/* Copyright */}
-        <p className="text-[10px] text-center text-[#7E889B] font-korean-sans mt-3 pt-2.5 border-t border-[#E2D7BE]/70 max-w-xs mx-auto">
+        <p className="text-[10px] text-center text-[#7E889B] font-korean-sans mt-4 pt-3 border-t border-[#E2D7BE]/70 max-w-xs mx-auto leading-relaxed px-2">
           © 2026 천안시청소년복합커뮤니티센터 교육사업팀.
+          <br />
           All rights reserved.
         </p>
       </div>
