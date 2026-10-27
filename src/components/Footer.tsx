@@ -3,22 +3,41 @@ import { EVENT_DATA } from '../data/event.ts';
 import { InkMountain } from './InkMountain.tsx';
 
 const footerLogos = [
-  { src: '/images/logo.png', alt: '천안시청소년재단 천안시청소년복합커뮤니티센터' },
-  { src: '/images/logo2.png', alt: '충청남도천안교육지원청' },
+  {
+    src: '/images/logo.png',
+    alt: '천안시청소년재단 천안시청소년복합커뮤니티센터',
+  },
+  {
+    src: '/images/logo2.png',
+    alt: '충청남도천안교육지원청',
+  },
+  {
+    src: '/images/logo3.png',
+    alt: '협력 기관 로고 3',
+  },
+  {
+    src: '/images/logo4.png',
+    alt: '협력 기관 로고 4',
+  },
 ];
 
 export const Footer: React.FC = () => {
   return (
     <footer className="relative bg-[#18233C] text-white overflow-hidden select-none">
-      {/* Top Ink Landscape connection */}
+      {/* 상단 수묵 산수 연결 */}
       <div className="relative -mt-1 w-full">
-        <InkMountain variant="footer" showSun={true} showInkDots={true} />
+        <InkMountain
+          variant="footer"
+          showSun={true}
+          showInkDots={true}
+        />
       </div>
 
-      {/* Main Closing Message in Deep Navy night sky */}
+      {/* 마무리 메시지 */}
       <div className="relative z-20 px-6 sm:px-9 py-12 text-center">
         <p className="font-korean-serif text-lg sm:text-xl font-bold text-[#E9D29A] leading-relaxed mb-4">
-          “우리의 소리가<br />
+          “우리의 소리가
+          <br />
           당신의 오늘에 오래도록 울리기를 바랍니다.”
         </p>
 
@@ -28,37 +47,50 @@ export const Footer: React.FC = () => {
           <p className="font-korean-serif font-semibold text-white text-sm">
             {EVENT_DATA.title}
           </p>
+
           <p className="tracking-wider text-[#D8B764]">
             2026. 12. 12. SAT · 5:00 PM
           </p>
+
           <p className="text-white/70">
-            천안시청소년복합커뮤니티센터 대공연장
+            {EVENT_DATA.venueName} {EVENT_DATA.venueHall}
           </p>
+
           <p className="text-white/60 text-xs mt-1">
-            문의 : <a href={`tel:${EVENT_DATA.contactPhone}`} className="hover:text-white underline underline-offset-2">{EVENT_DATA.contactPhone}</a>
+            문의 :{' '}
+            <a
+              href={`tel:${EVENT_DATA.contactPhone}`}
+              className="hover:text-white underline underline-offset-2"
+            >
+              {EVENT_DATA.contactPhone}
+            </a>
           </p>
         </div>
       </div>
 
-      {/* Footer 하단 자동으로 흘러가는 2개 기관 로고 순환 영역 (logo.png & logo2.png) */}
+      {/* 하단 기관 로고 순환 영역 */}
       <div className="bg-[#FAF6ED] text-[#222631] py-5 border-t-2 border-[#C59A38]/50 overflow-hidden">
         <div className="text-center mb-2.5">
-          <span className="text-[10px] font-korean-batang text-[#6F4A0C] tracking-widest uppercase">
+          <span className="text-[10px] font-korean-batang text-[#6F4A0C] tracking-widest">
             주최 · 주관 및 협력 기관
           </span>
         </div>
 
-        {/* Continuous Flowing Marquee Track (Repeated for seamless infinite loop) */}
-        <div className="relative w-full overflow-hidden py-1">
-          {/* Subtle left & right edge fades on hanji background */}
+        <div className="relative w-full overflow-hidden py-2">
+          {/* 좌우 페이드 */}
           <div className="absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-[#FAF6ED] to-transparent z-10 pointer-events-none" />
+
           <div className="absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#FAF6ED] to-transparent z-10 pointer-events-none" />
 
+          {/* 무한 로고 흐름 */}
           <div className="animate-logo-marquee flex items-center">
             {/* Sequence 1 */}
             <div className="flex items-center gap-10 sm:gap-14 px-6 shrink-0">
               {footerLogos.map((logo, idx) => (
-                <div key={`s1-${idx}`} className="flex items-center justify-center">
+                <div
+                  key={`s1-${idx}`}
+                  className="flex items-center justify-center"
+                >
                   <img
                     src={logo.src}
                     alt={logo.alt}
@@ -69,10 +101,13 @@ export const Footer: React.FC = () => {
               ))}
             </div>
 
-            {/* Sequence 2 for seamless loop */}
+            {/* Sequence 2 */}
             <div className="flex items-center gap-10 sm:gap-14 px-6 shrink-0">
               {footerLogos.map((logo, idx) => (
-                <div key={`s2-${idx}`} className="flex items-center justify-center">
+                <div
+                  key={`s2-${idx}`}
+                  className="flex items-center justify-center"
+                >
                   <img
                     src={logo.src}
                     alt={logo.alt}
@@ -83,24 +118,13 @@ export const Footer: React.FC = () => {
               ))}
             </div>
 
-            {/* Sequence 3 for seamless loop */}
+            {/* Sequence 3 */}
             <div className="flex items-center gap-10 sm:gap-14 px-6 shrink-0">
               {footerLogos.map((logo, idx) => (
-                <div key={`s3-${idx}`} className="flex items-center justify-center">
-                  <img
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="h-8 sm:h-9 w-auto max-w-[155px] object-contain opacity-90 hover:opacity-100 transition-opacity"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
-
-            {/* Sequence 4 for seamless loop */}
-            <div className="flex items-center gap-10 sm:gap-14 px-6 shrink-0">
-              {footerLogos.map((logo, idx) => (
-                <div key={`s4-${idx}`} className="flex items-center justify-center">
+                <div
+                  key={`s3-${idx}`}
+                  className="flex items-center justify-center"
+                >
                   <img
                     src={logo.src}
                     alt={logo.alt}
@@ -113,9 +137,10 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Copyright notice */}
+        {/* Copyright */}
         <p className="text-[10px] text-center text-[#7E889B] font-korean-sans mt-3 pt-2.5 border-t border-[#E2D7BE]/70 max-w-xs mx-auto">
-          © 2026 천안청소년국악관현악단. All rights reserved.
+          © 2026 천안시청소년복합커뮤니티센터 교육사업팀.
+          All rights reserved.
         </p>
       </div>
     </footer>
