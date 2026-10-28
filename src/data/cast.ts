@@ -1,7 +1,9 @@
-import { CastSection } from '../types/index.ts';
+
+import type { CastSection } from '../types/index.ts';
 
 /**
- * 지도진
+ * 제3회 천안청소년국악관현악단 정기연주회
+ * 지도진 명단
  */
 export const INSTRUCTORS: CastSection[] = [
   {
@@ -43,7 +45,8 @@ export const INSTRUCTORS: CastSection[] = [
 ];
 
 /**
- * 청소년 단원 명단
+ * 제3회 정기연주회 청소년 단원 명단
+ * 2026년 10월 수정 반영
  */
 export const YOUTH_MEMBERS = [
   {
@@ -55,13 +58,12 @@ export const YOUTH_MEMBERS = [
       '박서현',
       '배지원',
       '원혜인',
-      '이예지',
-      '이지수',
       '임윤서',
       '이예안',
       '양서하',
       '홍은솔',
       '이채민',
+      '정지윤',
     ],
   },
   {
@@ -71,7 +73,6 @@ export const YOUTH_MEMBERS = [
       '김은서',
       '박서윤',
       '윤이나',
-      '이인준',
       '곽서율',
       '김다솜',
       '정은아',
@@ -92,7 +93,6 @@ export const YOUTH_MEMBERS = [
       '진나연',
       '최하은',
       '한가은',
-      '현채이',
       '문서연',
       '이경하',
       '김무찬',
@@ -115,7 +115,6 @@ export const YOUTH_MEMBERS = [
       '최원',
       '배서우',
       '강석연',
-      '김윤서',
       '이정훈',
       '홍장혁',
     ],
@@ -123,12 +122,10 @@ export const YOUTH_MEMBERS = [
   {
     part: '피리',
     names: [
-      '김예탁',
       '김채율',
       '김하진',
       '윤수인',
       '윤수현',
-      '장이현',
       '한유은',
       '최윤',
       '심명건',
@@ -138,17 +135,22 @@ export const YOUTH_MEMBERS = [
     part: '타악',
     names: [
       '김다윗',
-      '김도운',
       '김지율',
       '문은서',
+      '이유정',
+      '이상훈',
+      '황서희',
+    ],
+  },
+  {
+    part: '사물놀이',
+    names: [
+      '김도운',
+      '강수아',
       '박소율',
       '배성윤',
       '송은석',
-      '강수아',
-      '이유정',
-      '이상훈',
       '박연우',
-      '정한비',
       '오하린',
     ],
   },
