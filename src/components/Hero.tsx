@@ -13,7 +13,7 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToNotice }) => {
       */}
       <div className="relative w-full">
         <img
-          src="/images/poster.PNG"
+          src="/images/poster.png"
           alt="제3회 천안청소년국악관현악단 정기연주회 포스터"
           className="block w-full h-auto object-contain"
           draggable={false}
